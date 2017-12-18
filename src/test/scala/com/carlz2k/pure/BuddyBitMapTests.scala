@@ -13,9 +13,9 @@ class BuddyBitMapTests extends Specification {
 
   This is a specification for check if coordinates form a square
 
-  The check coordinates should
-    return true                            $testClearTrue
-    return true                            $testSetTrue
+  The buddy map system should
+    clearbit return true                            $testClearTrue
+    setbit return true                            $testSetTrue
                                                       """
 
   def testClearTrue: Boolean = {
