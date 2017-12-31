@@ -20,5 +20,7 @@ case class SwapValue() {
     println("after swap")
     println("a = " + tempA)
     println("b = " + tempB)
+
+    println(Integer.toBinaryString(~0))
   }
 }
