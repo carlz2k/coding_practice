@@ -20,6 +20,10 @@ class BitOperatorTests extends Specification {
                                                       """
 
   def testSignedRightShift: Boolean = {
+
+    println(0^5^5)
+    println(0^5^5^3)
+    println(5^3^5)
     var a = 120
     a = a >> 2
     Integer.toBinaryString(a) == "11110"
