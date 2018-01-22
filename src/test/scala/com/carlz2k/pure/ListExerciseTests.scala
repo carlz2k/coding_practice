@@ -1,6 +1,6 @@
 package com.carlz2k.pure
 
-import com.carlz2k.pure.model.ListExercise
+import com.carlz2k.pure.model.{GateToWorld, ListExercise}
 import org.specs2.Specification
 
 /**
@@ -8,7 +8,7 @@ import org.specs2.Specification
   * <p>
   * carl.zhang add class description 
   */
-class ListExerciseTests extends Specification{
+class ListExerciseTests extends Specification {
   def is =
     s2"""
 
@@ -36,6 +36,24 @@ class ListExerciseTests extends Specification{
     println(listFind.removeAt(2, List("a", "b", "c", "d", "e")))
 
     println(listFind.combinations(3, List("a", "b", "c", "d", "e")))
+
+    println(List("a", "b", "c", "d", "e").map(List(_)))
+
+    println(Option(true).map(_.toString).map(_.toUpperCase))
+
+
+    println(listFind.add(1)(2))
+    println(listFind.addOne(5))
+    val one = GateToWorld(1)
+    val two = GateToWorld(2)
+    val three = GateToWorld(3)
+
+    val six = for {
+      a <- one
+      b <- two
+      c <- three
+    } yield a + b + c
+    println(six)
     true
   }
 }

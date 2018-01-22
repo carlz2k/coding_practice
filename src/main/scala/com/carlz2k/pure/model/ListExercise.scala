@@ -142,8 +142,16 @@ class ListExercise[T] {
     if (n > ls.length) Nil
     else ls match {
       case _ :: _ if n == 1 => ls.map(List(_))
-      case hd :: tl => combinations(n - 1, tl).map(hd :: _) ::: combinations(n, tl)
+      case h :: tl => combinations(n - 1, tl).map(h :: _) ::: combinations(n, tl)
       case _ => Nil
     }
+  }
+
+  def add(x: Int): Int => Int = {
+    (y: Int) => x + y
+  }
+
+  def addOne: Int => Int = {
+    (x: Int) => x + 1
   }
 }
