@@ -6,7 +6,7 @@ import org.specs2.Specification
 /**
   * <i>Copyright (c) 2017, Payfirma Corporation. All rights reserved.</i>
   * <p>
-  * carl.zhang add class description 
+  * carl.zhang add class description
   */
 class BitOperatorTests extends Specification {
   def is =
@@ -20,6 +20,12 @@ class BitOperatorTests extends Specification {
                                                       """
 
   def testSignedRightShift: Boolean = {
+
+    val a1 = Array(1, 2, 3, 4, 5)
+    var b1 = a1
+    b1 = b1 :+ 2
+    println(a1)
+    println(b1)
 
     println(0^5^5)
     println(0^5^5^3)
